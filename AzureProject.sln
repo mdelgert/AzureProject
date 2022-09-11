@@ -13,11 +13,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Settings", "Settings", "{27
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Reference", "Reference", "{56FEDE78-43DC-4A2D-A0A8-7BB2FF1D0B83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureProject.FunctionApp", "AzureProject.FunctionApp\AzureProject.FunctionApp.csproj", "{F9592627-4C88-4FC0-918A-8E322C77FE7E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureProject.FunctionApp", "AzureProject.FunctionApp\AzureProject.FunctionApp.csproj", "{F9592627-4C88-4FC0-918A-8E322C77FE7E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F87C35B2-F1DB-41B2-8C70-C102B6A491E2}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Workflows", "Workflows", "{A41EE061-CCCB-466F-81E1-E5D3CE632083}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\func-app-test-eastus.yml = .github\workflows\func-app-test-eastus.yml
 	EndProjectSection
 EndProject
 Global
@@ -45,6 +50,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{274EC1FD-AE63-48E7-B688-15F447BB5495} = {9469E738-0CF5-4BFC-8C14-E7C49CEA720C}
 		{56FEDE78-43DC-4A2D-A0A8-7BB2FF1D0B83} = {9469E738-0CF5-4BFC-8C14-E7C49CEA720C}
+		{A41EE061-CCCB-466F-81E1-E5D3CE632083} = {9469E738-0CF5-4BFC-8C14-E7C49CEA720C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BC7084E0-1729-443C-9BCF-B75F243AB023}

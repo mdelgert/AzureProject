@@ -12,6 +12,12 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Settings", "Settings", "{274EC1FD-AE63-48E7-B688-15F447BB5495}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Reference", "Reference", "{56FEDE78-43DC-4A2D-A0A8-7BB2FF1D0B83}"
+	ProjectSection(SolutionItems) = preProject
+		Files\Reference\Bicep.md = Files\Reference\Bicep.md
+		Files\Reference\GitHubActions.md = Files\Reference\GitHubActions.md
+		Files\Reference\GitHubRunner.md = Files\Reference\GitHubRunner.md
+		Files\Reference\nuget.config = Files\Reference\nuget.config
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureProject.FunctionApp", "AzureProject.FunctionApp\AzureProject.FunctionApp.csproj", "{F9592627-4C88-4FC0-918A-8E322C77FE7E}"
 EndProject
@@ -23,6 +29,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Workflows", "Workflows", "{A41EE061-CCCB-466F-81E1-E5D3CE632083}"
 	ProjectSection(SolutionItems) = preProject
 		.github\workflows\func-app-test-eastus.yml = .github\workflows\func-app-test-eastus.yml
+		.github\workflows\nuget.yml = .github\workflows\nuget.yml
 	EndProjectSection
 EndProject
 Global

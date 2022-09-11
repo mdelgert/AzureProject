@@ -1,13 +1,14 @@
-<Project Sdk="Microsoft.NET.Sdk">
-
+﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <Authors>Matthew Elgert</Authors>
+        <Company>GitHub</Company>
+        <PackageDescription>Core shared common class library</PackageDescription>
+        <RepositoryUrl>https://github.com/mdelgert/AzureProject</RepositoryUrl>
     </PropertyGroup>
-
     <ItemGroup>
         <PackageReference Include="Bogus" Version="34.0.2"/>
     </ItemGroup>
-
 </Project>

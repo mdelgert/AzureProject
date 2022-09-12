@@ -6,5 +6,6 @@ public class CustomerFakeTests
     public void GetTest()
     {
         var customers = CustomerFake.Get(10);
+        Assert.NotEmpty(customers);
     }
 }

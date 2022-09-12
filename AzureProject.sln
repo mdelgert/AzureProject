@@ -32,6 +32,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Workflows", "Workflows", "{
 		.github\workflows\nuget.yml = .github\workflows\nuget.yml
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{61E4255F-0375-44DF-8450-86FB646BD816}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "blazor1", "Examples\blazor1\blazor1.csproj", "{B990C4FA-4247-43D5-BF68-E840744DD124}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "blazor2", "Examples\blazor2\blazor2.csproj", "{7A047CDA-C017-423E-B0CD-773E7E7045CB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +56,14 @@ Global
 		{F9592627-4C88-4FC0-918A-8E322C77FE7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9592627-4C88-4FC0-918A-8E322C77FE7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9592627-4C88-4FC0-918A-8E322C77FE7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B990C4FA-4247-43D5-BF68-E840744DD124}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B990C4FA-4247-43D5-BF68-E840744DD124}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B990C4FA-4247-43D5-BF68-E840744DD124}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B990C4FA-4247-43D5-BF68-E840744DD124}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A047CDA-C017-423E-B0CD-773E7E7045CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A047CDA-C017-423E-B0CD-773E7E7045CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A047CDA-C017-423E-B0CD-773E7E7045CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A047CDA-C017-423E-B0CD-773E7E7045CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,6 +72,8 @@ Global
 		{274EC1FD-AE63-48E7-B688-15F447BB5495} = {9469E738-0CF5-4BFC-8C14-E7C49CEA720C}
 		{56FEDE78-43DC-4A2D-A0A8-7BB2FF1D0B83} = {9469E738-0CF5-4BFC-8C14-E7C49CEA720C}
 		{A41EE061-CCCB-466F-81E1-E5D3CE632083} = {9469E738-0CF5-4BFC-8C14-E7C49CEA720C}
+		{B990C4FA-4247-43D5-BF68-E840744DD124} = {61E4255F-0375-44DF-8450-86FB646BD816}
+		{7A047CDA-C017-423E-B0CD-773E7E7045CB} = {61E4255F-0375-44DF-8450-86FB646BD816}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BC7084E0-1729-443C-9BCF-B75F243AB023}

@@ -1,0 +1,1 @@
+﻿# AzureProject.FunctionApp

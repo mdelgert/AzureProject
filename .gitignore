@@ -351,3 +351,6 @@ MigrationBackup/
 
 # JetBrains ignore
 .idea/
+
+# Ignore local settings
+/Files/Settings/local.settings.json

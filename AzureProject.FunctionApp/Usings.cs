@@ -17,3 +17,4 @@ global using AzureProject.FunctionApp;
 global using AzureProject.Shared.Workflow;
 global using Microsoft.Extensions.DependencyInjection;
 global using Microsoft.Azure.Functions.Extensions.DependencyInjection;
+global using AzureProject.Shared.Helpers;

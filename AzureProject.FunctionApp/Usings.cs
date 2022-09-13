@@ -12,3 +12,5 @@ global using Microsoft.OpenApi.Models;
 global using Newtonsoft.Json;
 global using System;
 global using AzureProject.Shared.Fakes;
+global using AzureProject.Shared.Services;
+

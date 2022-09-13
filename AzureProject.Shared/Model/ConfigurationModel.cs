@@ -2,5 +2,5 @@
 
 public class ConfigurationModel
 {
-    public string? AzureKeyVault { get; set; }
+    public string AzureKeyVault { get; set; }
 }

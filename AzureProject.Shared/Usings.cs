@@ -1,6 +1,7 @@
 ﻿global using Azure.Security.KeyVault.Secrets;
 global using Azure.Identity;
 global using AzureProject.Shared.Model;
+global using AzureProject.Shared.Helpers;
 global using Bogus;
 global using Bogus.DataSets;
 global using NETCore.Encrypt;

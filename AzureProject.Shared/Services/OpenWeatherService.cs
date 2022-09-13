@@ -1,15 +1,20 @@
 ﻿namespace AzureProject.Shared.Services;
 
-public class OpenWeatherService
+public static class OpenWeatherService
 {
-    public async Task Get()
+    private const string BaseUrl = "https://api.openweathermap.org";
+    public static async Task<string?> Get(double lat, double lon)
     {
-        var options = new RestClientOptions("https://api.myorg.com")
+        var appid = await KeyVaultHelper.GetSecret("OpenWeatherKey");
+        CancellationToken cancellationToken = default;
+        var options = new RestClientOptions($"{BaseUrl}/data/2.5/weather?lat={lat}&lon={lon}&appid={appid}")
         {
-            ThrowOnAnyError = true,
-            Timeout = 1000
+            ThrowOnAnyError = true
         };
         var client = new RestClient(options);
+        var request = new RestRequest();
+        var response = await client.GetAsync(request, cancellationToken);
+        return response.Content;
     }
 }
 

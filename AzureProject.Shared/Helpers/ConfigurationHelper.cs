@@ -8,9 +8,7 @@ public static class ConfigurationHelper
         {
             AzureKeyVault = Environment.GetEnvironmentVariable("AzureKeyVault") ?? string.Empty
         };
-
-        configuration = KeyVaultHelper.MapValues(configuration);
-            
+        
         return configuration;
     }
 }

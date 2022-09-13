@@ -7,3 +7,4 @@ global using NETCore.Encrypt;
 global using RestSharp;
 global using Newtonsoft.Json.Linq;
 global using Newtonsoft.Json;
+global using System.ComponentModel;

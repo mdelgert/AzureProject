@@ -6,9 +6,11 @@ public static class ConfigurationHelper
     {
         var configuration = new ConfigurationModel
         {
-            AzureKeyVault = Environment.GetEnvironmentVariable("AzureKeyVault")
+            AzureKeyVault = Environment.GetEnvironmentVariable("AzureKeyVault") ?? string.Empty
         };
-        
+
+        configuration = KeyVaultHelper.MapValues(configuration);
+            
         return configuration;
     }
 }

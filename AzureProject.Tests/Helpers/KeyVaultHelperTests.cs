@@ -20,9 +20,17 @@ public class KeyVaultHelperTests
     // }
     
     [Fact]
-    public async Task GetKeyTest()
+    public async Task GetKeyTest1()
     {
         _secretValue = await KeyVaultHelper.GetSecret(_configuration.AzureKeyVault, SecretName);
+        Assert.NotNull(_secretValue);
+        _testOutputHelper.WriteLine(_secretValue);
+    }
+    
+    [Fact]
+    public async Task GetKeyTest2()
+    {
+        _secretValue = await KeyVaultHelper.GetSecret(_configuration.AzureKeyVault, "OpenWeatherKey");
         Assert.NotNull(_secretValue);
         _testOutputHelper.WriteLine(_secretValue);
     }

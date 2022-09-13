@@ -1,5 +1,12 @@
 ﻿# AzureProject.FunctionApp
 
+#Dependacies
+https://www.nuget.org/packages/Microsoft.Azure.Functions.Extensions/
+Install-Package Microsoft.Azure.Functions.Extensions
+
+https://www.nuget.org/packages/Microsoft.Extensions.DependencyInjection/
+Install-Package Microsoft.Extensions.DependencyInjection
+
 #Azure Functions – Time Trigger (CRON) Cheat Sheet
 https://arminreiter.com/2017/02/azure-functions-time-trigger-cron-cheat-sheet/
 */15 * * * * * every 15 seconds

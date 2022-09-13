@@ -12,3 +12,6 @@ global using Newtonsoft.Json.Linq;
 global using Newtonsoft.Json;
 global using System.ComponentModel;
 global using System.Text;
+global using AzureProject.Shared.Services;
+global using Microsoft.Extensions.Logging;
+global using Microsoft.Azure.WebJobs.Logging;

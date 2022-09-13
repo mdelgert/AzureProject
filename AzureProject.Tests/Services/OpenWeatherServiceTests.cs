@@ -8,7 +8,7 @@ public class OpenWeatherServiceTests
     {
         _testOutputHelper = testOutputHelper;
     }
-    
+
     [Fact]
     public async Task GetWeatherTest()
     {

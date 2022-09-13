@@ -1,4 +1,5 @@
 # Links
+
 https://github.com/marketplace/actions/publish-nuget
 https://garywoodfine.com/how-to-use-github-actions-to-build-deploy-github-nuget-packages/
 https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-nuget-registry
@@ -16,11 +17,13 @@ https://devconnected.com/how-to-delete-local-and-remote-tags-on-git/
 https://josef.codes/dotnet-pack-include-referenced-projects/
 
 # Example
+
 dotnet new console --name OctocatApp
 cd OctocatApp
 dotnet pack --configuration Debug
 dotnet nuget push "OctocatApp/bin/Debug/NugetExample.1.0.0.nupkg" --source "github"
 
 # Auto action from tag for workflow to run tags must start with v
+
 git tag v1.0.0
 git push --tags

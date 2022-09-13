@@ -23,7 +23,7 @@ public static class StreamHelper
         await using var fileStream = new FileStream(filePath, FileMode.Create, FileAccess.Write);
         await stream.CopyToAsync(fileStream);
     }
-    
+
     public static async Task SaveToFile(string? filePath, MemoryStream memoryStream)
     {
         var directoryPath = Path.GetDirectoryName(filePath);

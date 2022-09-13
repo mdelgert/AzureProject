@@ -3,6 +3,7 @@
 public static class OpenWeatherService
 {
     private const string BaseUrl = "https://api.openweathermap.org";
+
     public static async Task<string?> Get(double lat, double lon)
     {
         var openWeatherKey = await KeyVaultHelper.GetSecret("OpenWeatherKey");

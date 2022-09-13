@@ -13,4 +13,7 @@ global using Newtonsoft.Json;
 global using System;
 global using AzureProject.Shared.Fakes;
 global using AzureProject.Shared.Services;
-
+global using AzureProject.FunctionApp;
+global using AzureProject.Shared.Workflow;
+global using Microsoft.Extensions.DependencyInjection;
+global using Microsoft.Azure.Functions.Extensions.DependencyInjection;

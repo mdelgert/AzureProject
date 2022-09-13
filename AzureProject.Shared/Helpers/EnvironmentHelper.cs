@@ -23,11 +23,10 @@ public static class EnvironmentHelper
     {
         using var file = File.OpenText(settingsPath);
         var reader = new JsonTextReader(file);
-        var jObject = JsonConvert.DeserializeObject<Dictionary<string, string>>(JObject.Load(reader).GetValue("Values")!.ToString());
+        var jObject =
+            JsonConvert.DeserializeObject<Dictionary<string, string>>(
+                JObject.Load(reader).GetValue("Values")!.ToString());
         if (jObject == null) return;
-        foreach (var key in jObject.Keys)
-        {
-            Environment.SetEnvironmentVariable(key, jObject[key]);
-        }
+        foreach (var key in jObject.Keys) Environment.SetEnvironmentVariable(key, jObject[key]);
     }
 }

@@ -20,11 +20,11 @@ public class BlobServiceTests
         product.StockValue = 44100;
         product.Tags = new JArray("Real", "OnSale");
         _testOutputHelper.WriteLine(product.ToString());
-        
+
         var fileName = FormatHelper.DateIso8601() + ".json";
         var file = StreamHelper.Convert(product.ToString());
         const string container = "test";
-        
+
         await BlobService.SaveFile(fileName, file, container);
     }
 }

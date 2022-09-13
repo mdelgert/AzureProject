@@ -5,7 +5,7 @@ public static class BlobService
     public static async Task SaveFile(string fileName, MemoryStream file, string container)
     {
         var storageConnectionString = await KeyVaultHelper.GetSecret("StorageConnectionString");
-        
+
         var containerClient = new BlobContainerClient(
             storageConnectionString,
             container);

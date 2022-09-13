@@ -19,3 +19,9 @@ Install-Package Azure.Identity
 
 https://www.nuget.org/packages/Azure.Storage.Blobs/
 Install-Package Azure.Storage.Blobs
+
+https://www.nuget.org/packages/Serilog.Extensions.Logging.File
+Install-Package Serilog.Extensions.Logging.File
+
+https://www.nuget.org/packages/Microsoft.Extensions.Logging.Console/
+Install-Package Microsoft.Extensions.Logging.Console

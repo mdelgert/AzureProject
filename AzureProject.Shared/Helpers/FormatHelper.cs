@@ -2,10 +2,18 @@
 
 public static class FormatHelper
 {
+    public static long UnixTime()
+    {
+        //https://stackoverflow.com/questions/17632584/how-to-get-the-unix-timestamp-in-c-sharp
+        var dateTime = DateTime.UtcNow;
+        var unixTime = ((DateTimeOffset)dateTime).ToUnixTimeSeconds();
+        return unixTime;
+    }
+    
     public static string DateIso8601()
     {
         //Calendar dates - https://en.wikipedia.org/wiki/ISO_8601
-        return DateTime.Now.ToString("yyyy-MM-dd");
+        return DateTime.UtcNow.ToString("yyyy-MM-dd");
     }
     
     public static string Base64Encode(string plainText)

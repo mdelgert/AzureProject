@@ -30,3 +30,5 @@ public static class JsonService
         return response.Content;
     }
 }
+
+//https://restsharp.dev/v107/#restsharp-v107

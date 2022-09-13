@@ -12,3 +12,7 @@ public class OpenWeatherService
         var client = new RestClient(options);
     }
 }
+
+//https://openweathermap.org/api/geocoding-api
+//https://openweathermap.org/current
+//https://www.latlong.net/

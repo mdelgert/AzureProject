@@ -353,4 +353,4 @@ MigrationBackup/
 .idea/
 
 # Ignore local settings
-/Files/Settings/local.settings.json
+# /Files/Settings/local.settings.json

@@ -16,3 +16,6 @@ Install-Package Azure.Security.KeyVault.Secrets
 
 https://www.nuget.org/packages/Azure.Identity/
 Install-Package Azure.Identity
+
+https://www.nuget.org/packages/Azure.Storage.Blobs/
+Install-Package Azure.Storage.Blobs

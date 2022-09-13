@@ -1,4 +1,6 @@
-﻿global using Azure.Security.KeyVault.Secrets;
+﻿global using Azure.Storage.Blobs;
+global using Azure.Storage.Blobs.Models;
+global using Azure.Security.KeyVault.Secrets;
 global using Azure.Identity;
 global using AzureProject.Shared.Model;
 global using AzureProject.Shared.Helpers;

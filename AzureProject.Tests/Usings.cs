@@ -6,3 +6,4 @@ global using AzureProject.Shared.Services;
 global using AzureProject.Shared.Model;
 global using Microsoft.Extensions.DependencyInjection;
 global using Microsoft.Extensions.Hosting;
+global using Newtonsoft.Json.Linq;

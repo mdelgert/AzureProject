@@ -5,9 +5,9 @@ public static class OpenWeatherService
     private const string BaseUrl = "https://api.openweathermap.org";
     public static async Task<string?> Get(double lat, double lon)
     {
-        var appid = await KeyVaultHelper.GetSecret("OpenWeatherKey");
+        var openWeatherKey = await KeyVaultHelper.GetSecret("OpenWeatherKey");
         CancellationToken cancellationToken = default;
-        var options = new RestClientOptions($"{BaseUrl}/data/2.5/weather?lat={lat}&lon={lon}&appid={appid}")
+        var options = new RestClientOptions($"{BaseUrl}/data/2.5/weather?lat={lat}&lon={lon}&appid={openWeatherKey}")
         {
             ThrowOnAnyError = true
         };

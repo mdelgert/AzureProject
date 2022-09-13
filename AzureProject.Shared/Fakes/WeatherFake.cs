@@ -2,16 +2,16 @@
 
 public static class WeatherFake
 {
-    private static readonly string[] Summaries = new[]
+    private static readonly string[] Summaries =
     {
         "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
     };
-    
+
     public static List<WeatherModel> Get(int batchSize)
     {
         var weathers = new List<WeatherModel>();
         var startDate = DateTime.UtcNow;
-        
+
         for (var i = 1; i <= batchSize; i++)
         {
             var weather = new WeatherModel
@@ -22,7 +22,7 @@ public static class WeatherFake
             };
             weathers.Add(weather);
         }
-        
+
         return weathers;
     }
 }

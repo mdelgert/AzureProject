@@ -19,6 +19,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Reference", "Reference", "{
 		Files\Reference\Bicep.md = Files\Reference\Bicep.md
 		Files\Reference\GitHubActions.md = Files\Reference\GitHubActions.md
 		Files\Reference\GitHubRunner.md = Files\Reference\GitHubRunner.md
+		Files\Reference\JSONServer.md = Files\Reference\JSONServer.md
 		Files\Reference\nuget.config = Files\Reference\nuget.config
 	EndProjectSection
 EndProject
@@ -27,6 +28,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F87C35B2-F1DB-41B2-8C70-C102B6A491E2}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
+		db.json = db.json
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Workflows", "Workflows", "{A41EE061-CCCB-466F-81E1-E5D3CE632083}"

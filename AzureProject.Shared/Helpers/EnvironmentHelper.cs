@@ -29,4 +29,21 @@ public static class EnvironmentHelper
         if (jObject == null) return;
         foreach (var key in jObject.Keys) Environment.SetEnvironmentVariable(key, jObject[key]);
     }
+
+    public static void SetupKeyVaultSettings(string settingsPath)
+    {
+        using var streamReader = new StreamReader(settingsPath);
+        var json = streamReader.ReadToEnd();
+
+        var keys = JsonConvert.DeserializeObject<Dictionary<string, string>>(json);
+        
+        foreach (var key in keys)
+        {
+            Environment.SetEnvironmentVariable(key.Key, key.Value);
+        }
+    }
 }
+
+//https://www.newtonsoft.com/json/help/html/DeserializeObject.htm
+//https://stackoverflow.com/questions/13297563/read-and-parse-a-json-file-in-c-sharp
+//https://stackoverflow.com/questions/1207731/how-can-i-deserialize-json-to-a-simple-dictionarystring-string-in-asp-net

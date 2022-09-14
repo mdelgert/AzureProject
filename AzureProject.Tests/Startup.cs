@@ -5,6 +5,7 @@ public class Startup
     public static void ConfigureServices(IServiceCollection services, HostBuilderContext hostBuilderContext)
     {
         EnvironmentHelper.SetupValues("local.settings.json");
+        KeyVaultHelper.SetEnvironment();
         services.AddSingleton<IOpenWeatherWorkflow, OpenWeatherWorkflow>();
         services.AddLogging(loggerBuilder =>
         {

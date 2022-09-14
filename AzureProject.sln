@@ -18,6 +18,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Reference", "Reference", "{
 	ProjectSection(SolutionItems) = preProject
 		Files\Reference\AzuriteEmulator.md = Files\Reference\AzuriteEmulator.md
 		Files\Reference\Bicep.md = Files\Reference\Bicep.md
+		Files\Reference\CosmosDB.md = Files\Reference\CosmosDB.md
 		Files\Reference\GitHubActions.md = Files\Reference\GitHubActions.md
 		Files\Reference\GitHubRunner.md = Files\Reference\GitHubRunner.md
 		Files\Reference\JSONServer.md = Files\Reference\JSONServer.md

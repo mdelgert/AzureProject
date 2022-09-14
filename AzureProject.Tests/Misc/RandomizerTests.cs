@@ -1,4 +1,5 @@
-﻿using RandomDataGenerator.CreditCardValidator;
+﻿//Nuget: https://www.nuget.org/packages/RandomDataGenerator.Net/
+using RandomDataGenerator.CreditCardValidator;
 using RandomDataGenerator.FieldOptions;
 using RandomDataGenerator.Randomizers;
 

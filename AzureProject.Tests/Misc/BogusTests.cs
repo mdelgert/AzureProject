@@ -1,4 +1,5 @@
-﻿using Bogus;
+﻿//Nuget: https://www.nuget.org/packages/Bogus
+using Bogus;
 
 namespace AzureProject.Tests.Misc;
 

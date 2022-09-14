@@ -1,4 +1,5 @@
-﻿using Bogus;
+﻿//Nuget: https://www.nuget.org/packages/Bogus
+using Bogus;
 using Bogus.DataSets;
 
 namespace AzureProject.Shared.Fakes;

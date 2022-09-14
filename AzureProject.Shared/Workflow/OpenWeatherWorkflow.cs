@@ -24,6 +24,12 @@ public class OpenWeatherWorkflow : IOpenWeatherWorkflow
             var openWeatherLatitude = double.Parse(Environment.GetEnvironmentVariable("OpenWeatherLatitude") ?? "0");
             var openWeatherLongitude = double.Parse(Environment.GetEnvironmentVariable("OpenWeatherLongitude") ?? "0");
             var response = await OpenWeatherService.Get(openWeatherLatitude, openWeatherLongitude);
+            if (response != null)
+            {
+                var fileName =  $"{FormatHelper.UnixTime()}.json";
+                var file = StreamHelper.Convert(response);
+                await BlobService.SaveFile(fileName, file, "open-weather");
+            }
             _log.LogInformation("{Name} Response:{Response}", namePrefix, response);
         }
         catch (Exception exception)

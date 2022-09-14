@@ -11,7 +11,7 @@
         </Content>
     </ItemGroup>
     <ItemGroup>
-      <Content Include="..\Files\Settings\local.settings.json" Link="keyvault.settings.json">
+      <Content Include="..\Files\Settings\keyvault.settings.json" Link="keyvault.settings.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
     </ItemGroup>

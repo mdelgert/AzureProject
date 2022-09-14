@@ -1,4 +1,7 @@
-﻿namespace AzureProject.Shared.Fakes;
+﻿using Bogus;
+using Bogus.DataSets;
+
+namespace AzureProject.Shared.Fakes;
 
 public static class CustomerFake
 {

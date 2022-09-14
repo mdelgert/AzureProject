@@ -1,4 +1,8 @@
-﻿namespace AzureProject.Tests.Misc;
+﻿using RandomDataGenerator.CreditCardValidator;
+using RandomDataGenerator.FieldOptions;
+using RandomDataGenerator.Randomizers;
+
+namespace AzureProject.Tests.Misc;
 
 public class RandomizerTests
 {

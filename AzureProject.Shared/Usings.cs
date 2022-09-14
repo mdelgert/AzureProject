@@ -5,8 +5,6 @@ global using Azure.Storage.Blobs.Models;
 global using AzureProject.Shared.Helpers;
 global using AzureProject.Shared.Model;
 global using AzureProject.Shared.Services;
-global using Bogus;
-global using Bogus.DataSets;
 global using Microsoft.Extensions.Logging;
 global using NETCore.Encrypt;
 global using Newtonsoft.Json;

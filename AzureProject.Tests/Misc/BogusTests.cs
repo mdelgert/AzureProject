@@ -1,4 +1,6 @@
-﻿namespace AzureProject.Tests.Misc;
+﻿using Bogus;
+
+namespace AzureProject.Tests.Misc;
 
 public class BogusTests
 {

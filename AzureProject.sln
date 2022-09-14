@@ -16,14 +16,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Settings", "Settings", "{27
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Reference", "Reference", "{56FEDE78-43DC-4A2D-A0A8-7BB2FF1D0B83}"
 	ProjectSection(SolutionItems) = preProject
+		Files\Reference\AzuriteEmulator.md = Files\Reference\AzuriteEmulator.md
 		Files\Reference\Bicep.md = Files\Reference\Bicep.md
 		Files\Reference\GitHubActions.md = Files\Reference\GitHubActions.md
 		Files\Reference\GitHubRunner.md = Files\Reference\GitHubRunner.md
 		Files\Reference\JSONServer.md = Files\Reference\JSONServer.md
 		Files\Reference\nuget.config = Files\Reference\nuget.config
 	EndProjectSection
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureProject.FunctionApp", "AzureProject.FunctionApp\AzureProject.FunctionApp.csproj", "{F9592627-4C88-4FC0-918A-8E322C77FE7E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F87C35B2-F1DB-41B2-8C70-C102B6A491E2}"
 	ProjectSection(SolutionItems) = preProject
@@ -39,18 +38,18 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Workflows", "Workflows", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{61E4255F-0375-44DF-8450-86FB646BD816}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "blazor1", "Examples\blazor1\blazor1.csproj", "{B990C4FA-4247-43D5-BF68-E840744DD124}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "blazor1", "Examples\blazor1\blazor1.csproj", "{B990C4FA-4247-43D5-BF68-E840744DD124}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "blazor2", "Examples\blazor2\blazor2.csproj", "{7A047CDA-C017-423E-B0CD-773E7E7045CB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "blazor2", "Examples\blazor2\blazor2.csproj", "{7A047CDA-C017-423E-B0CD-773E7E7045CB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureProject.ConsoleApp", "AzureProject.ConsoleApp\AzureProject.ConsoleApp.csproj", "{7E7D9858-E5B9-41D7-80C1-A15C8E6F59E8}"
-EndProject
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "AzureProject.Database", "AzureProject.Database\AzureProject.Database.sqlproj", "{DA3407CC-43CB-45DF-865D-8E115615C210}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureProject.ConsoleApp", "AzureProject.ConsoleApp\AzureProject.ConsoleApp.csproj", "{7E7D9858-E5B9-41D7-80C1-A15C8E6F59E8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{CB3F8A0E-5B12-44BB-9A1E-30844438F9A1}"
 	ProjectSection(SolutionItems) = preProject
 		Files\Scripts\ClearAzurite.bat = Files\Scripts\ClearAzurite.bat
 	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureProject.FunctionApp", "AzureProject.FunctionApp\AzureProject.FunctionApp.csproj", "{12B974A9-C356-440E-A811-0FB69BFB572E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -66,10 +65,6 @@ Global
 		{6D869CD3-1BD3-4D3D-8346-795DAD95CCC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D869CD3-1BD3-4D3D-8346-795DAD95CCC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D869CD3-1BD3-4D3D-8346-795DAD95CCC3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F9592627-4C88-4FC0-918A-8E322C77FE7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F9592627-4C88-4FC0-918A-8E322C77FE7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F9592627-4C88-4FC0-918A-8E322C77FE7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F9592627-4C88-4FC0-918A-8E322C77FE7E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B990C4FA-4247-43D5-BF68-E840744DD124}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B990C4FA-4247-43D5-BF68-E840744DD124}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B990C4FA-4247-43D5-BF68-E840744DD124}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -82,12 +77,10 @@ Global
 		{7E7D9858-E5B9-41D7-80C1-A15C8E6F59E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E7D9858-E5B9-41D7-80C1-A15C8E6F59E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E7D9858-E5B9-41D7-80C1-A15C8E6F59E8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DA3407CC-43CB-45DF-865D-8E115615C210}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DA3407CC-43CB-45DF-865D-8E115615C210}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DA3407CC-43CB-45DF-865D-8E115615C210}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{DA3407CC-43CB-45DF-865D-8E115615C210}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DA3407CC-43CB-45DF-865D-8E115615C210}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DA3407CC-43CB-45DF-865D-8E115615C210}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{12B974A9-C356-440E-A811-0FB69BFB572E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12B974A9-C356-440E-A811-0FB69BFB572E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12B974A9-C356-440E-A811-0FB69BFB572E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12B974A9-C356-440E-A811-0FB69BFB572E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,4 +1,4 @@
-namespace AzureProject.FunctionApp.Helpers;
+namespace AzureProject.FunctionApp.KeyVault;
 
 public class KeyVaultGetSecret
 {
@@ -14,20 +14,17 @@ public class KeyVaultGetSecret
     {
         string responseMessage;
         string secretName = req.Query["SecretName"];
-        var requestBody = await new StreamReader(req.Body).ReadToEndAsync();
-        dynamic data = JsonConvert.DeserializeObject(requestBody);
-        secretName = secretName ?? data?.name;
-        
+
         try
         {
             log.LogInformation("{NamePrefix} function processed a request", NamePrefix);
             var keyValue = await KeyVaultHelper.GetSecret(secretName);
-            var keyResponse = new {keyName = $"{secretName}", keyValue = $"{keyValue}"};
+            var keyResponse = new { keyName = $"{secretName}", keyValue = $"{keyValue}" };
             responseMessage = JsonConvert.SerializeObject(keyResponse, Formatting.Indented);
         }
         catch (Exception exception)
         {
-            var errorResponse = new {name = $"{NamePrefix}", error = $"{exception}"};
+            var errorResponse = new { name = $"{NamePrefix}", error = $"{exception}" };
             responseMessage = JsonConvert.SerializeObject(errorResponse);
             log.LogCritical("{NamePrefix} Error: {Exception}", NamePrefix, exception.ToString());
         }
@@ -35,4 +32,3 @@ public class KeyVaultGetSecret
         return await Task.FromResult<IActionResult>(new OkObjectResult(responseMessage));
     }
 }
-

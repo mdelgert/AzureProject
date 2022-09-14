@@ -11,6 +11,11 @@
         </Content>
     </ItemGroup>
     <ItemGroup>
+      <Content Include="..\Files\Settings\local.settings.json" Link="keyvault.settings.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+    <ItemGroup>
         <PackageReference Include="Bogus" Version="34.0.2" />
         <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="6.0.0" />
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.3.1" />

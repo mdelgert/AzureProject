@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Files", "Files", "{9469E738
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Settings", "Settings", "{274EC1FD-AE63-48E7-B688-15F447BB5495}"
 	ProjectSection(SolutionItems) = preProject
+		Files\Settings\keyvault.settings.example.json = Files\Settings\keyvault.settings.example.json
+		Files\Settings\keyvault.settings.json = Files\Settings\keyvault.settings.json
 		Files\Settings\local.settings.json = Files\Settings\local.settings.json
 	EndProjectSection
 EndProject
@@ -19,9 +21,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Reference", "Reference", "{
 		Files\Reference\AzuriteEmulator.md = Files\Reference\AzuriteEmulator.md
 		Files\Reference\Bicep.md = Files\Reference\Bicep.md
 		Files\Reference\CosmosDB.md = Files\Reference\CosmosDB.md
+		Files\Reference\DockerMSSQL.md = Files\Reference\DockerMSSQL.md
 		Files\Reference\GitHubActions.md = Files\Reference\GitHubActions.md
 		Files\Reference\GitHubRunner.md = Files\Reference\GitHubRunner.md
 		Files\Reference\JSONServer.md = Files\Reference\JSONServer.md
+		Files\Reference\KeyVault.md = Files\Reference\KeyVault.md
 		Files\Reference\nuget.config = Files\Reference\nuget.config
 	EndProjectSection
 EndProject

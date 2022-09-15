@@ -34,3 +34,6 @@ Install-Package Azure.Storage.Queues
 
 https://www.nuget.org/packages/SendGrid
 Install-Package SendGrid
+
+https://www.nuget.org/packages/SlackBotMessages
+Install-Package SlackBotMessages

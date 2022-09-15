@@ -20,5 +20,6 @@
         <PackageReference Include="NETCore.Encrypt" Version="2.1.0" />
         <PackageReference Include="RestSharp" Version="108.0.1" />
         <PackageReference Include="SendGrid" Version="9.28.1" />
+        <PackageReference Include="SlackBotMessages" Version="2.1.0" />
     </ItemGroup>
 </Project>

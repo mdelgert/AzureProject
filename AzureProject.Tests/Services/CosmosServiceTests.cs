@@ -3,7 +3,7 @@
 public class CosmosServiceTests
 {
     [Fact]
-    public async Task Test1()
+    public async Task DemoTest()
     {
         var cosmosService = new CosmosService();
         await cosmosService.Demo();

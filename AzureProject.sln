@@ -52,6 +52,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{CB3F
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureProject.FunctionApp", "AzureProject.FunctionApp\AzureProject.FunctionApp.csproj", "{12B974A9-C356-440E-A811-0FB69BFB572E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample Code", "Sample Code", "{A274864C-0CF8-4A6F-B5D0-21B3483E4672}"
+	ProjectSection(SolutionItems) = preProject
+		CosmosSample.cs = CosmosSample.cs
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,6 +88,7 @@ Global
 		{56FEDE78-43DC-4A2D-A0A8-7BB2FF1D0B83} = {9469E738-0CF5-4BFC-8C14-E7C49CEA720C}
 		{A41EE061-CCCB-466F-81E1-E5D3CE632083} = {9469E738-0CF5-4BFC-8C14-E7C49CEA720C}
 		{CB3F8A0E-5B12-44BB-9A1E-30844438F9A1} = {9469E738-0CF5-4BFC-8C14-E7C49CEA720C}
+		{A274864C-0CF8-4A6F-B5D0-21B3483E4672} = {9469E738-0CF5-4BFC-8C14-E7C49CEA720C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BC7084E0-1729-443C-9BCF-B75F243AB023}

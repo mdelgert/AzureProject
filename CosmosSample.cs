@@ -1,9 +1,9 @@
 ﻿using System.Net;
 using Microsoft.Azure.Cosmos;
 
-namespace AzureProject.Shared.Services;
+namespace AzureProject.SampleCode
 
-public class CosmosService
+public class CosmosSample
 {
     private static readonly string EndpointUri = Environment.GetEnvironmentVariable(KeyVaultEnum.CosmosEndpointUri.ToString()) ?? string.Empty;
     private static readonly string PrimaryKey = Environment.GetEnvironmentVariable(KeyVaultEnum.CosmosPrimaryKey.ToString()) ?? string.Empty;
@@ -25,7 +25,7 @@ public class CosmosService
         //await DeleteFamilyItemAsync();
         //await DeleteDatabaseAndCleanupAsync();
     }
-    
+
     // <CreateDatabaseAsync>
     /// <summary>
     ///     Create the database if it does not exist
@@ -82,7 +82,7 @@ public class CosmosService
                     }
                 }
             },
-            Address = new Address {State = "WA", County = "King", City = "Seattle"},
+            Address = new Address { State = "WA", County = "King", City = "Seattle" },
             IsRegistered = false
         };
 
@@ -136,7 +136,7 @@ public class CosmosService
                     Grade = 1
                 }
             },
-            Address = new Address {State = "NY", County = "Manhattan", City = "NY"},
+            Address = new Address { State = "NY", County = "Manhattan", City = "NY" },
             IsRegistered = true
         };
 

@@ -17,6 +17,7 @@ public static class CustomerFake
             var phone = new PhoneNumbers();
             var customer = new CustomerModel
             {
+                Id = Guid.NewGuid(),
                 FirstName = faker.Person.FirstName,
                 LastName = faker.Person.LastName,
                 Address = faker.Person.Address.Street,

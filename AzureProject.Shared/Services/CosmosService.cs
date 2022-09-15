@@ -5,51 +5,47 @@ namespace AzureProject.Shared.Services;
 
 public class CosmosService
 {
-    private const string ContainerId = "TestContainer";
-    private const string DatabaseId = "TestDatabase";
+    // private static readonly string EndpointUri =
+    //     Environment.GetEnvironmentVariable(KeyVaultEnum.CosmosEndpointUri.ToString()) ?? string.Empty;
+    //
+    // private static readonly string PrimaryKey =
+    //     Environment.GetEnvironmentVariable(KeyVaultEnum.CosmosPrimaryKey.ToString()) ?? string.Empty;
 
-    private static readonly string EndpointUri =
-        Environment.GetEnvironmentVariable(KeyVaultEnum.CosmosEndpointUri.ToString()) ?? string.Empty;
+    private static readonly string EndpointUri = "https://localhost:8081";
 
-    private static readonly string PrimaryKey =
-        Environment.GetEnvironmentVariable(KeyVaultEnum.CosmosPrimaryKey.ToString()) ?? string.Empty;
+    private static readonly string PrimaryKey = "C2y6yDjf5/R+ob0N8A7Cgv30VRDJIWEHLM+4QDU5DE2nQ9nDuVTqobD4b8mGGyPMbIZnqyMsEcaGQy67XIw/Jw==";
+
+    private const string DatabaseId = "db";
+    
+    private const string ContainerId = "customers";
 
     private Container _container;
     private CosmosClient _cosmosClient;
     private Database _database;
-
-    public async Task Demo()
+    
+    public async Task CreateCustomers(List<CustomerModel> customers)
     {
-        _cosmosClient = new CosmosClient(EndpointUri, PrimaryKey);
-        await CreateDatabaseAsync();
-        await CreateContainerAsync();
-        await AddItemsToContainerAsync();
-    }
-
-    private async Task CreateDatabaseAsync()
-    {
-        _database = await _cosmosClient.CreateDatabaseIfNotExistsAsync(DatabaseId);
+        // _cosmosClient = new CosmosClient(EndpointUri, PrimaryKey);
+        // _database = await _cosmosClient.CreateDatabaseIfNotExistsAsync(DatabaseId);
+        // _container = await _database.CreateContainerIfNotExistsAsync(ContainerId, "/LastName");
+        
+        foreach (var customer in customers)
+        {
+            await CreateCustomer(customer);
+        }
     }
     
-    private async Task CreateContainerAsync()
+    public async Task CreateCustomer(CustomerModel customer)
     {
+        _cosmosClient = new CosmosClient(EndpointUri, PrimaryKey);
+        _database = await _cosmosClient.CreateDatabaseIfNotExistsAsync(DatabaseId);
         _container = await _database.CreateContainerIfNotExistsAsync(ContainerId, "/LastName");
-    }
-
-    private async Task AddItemsToContainerAsync()
-    {
-        var customer = new CustomerModel
-        {
-            Id = "Smith.1",
-            FirstName = "Bob",
-            LastName = "Smith"
-        };
         
         try
         {
             // Read the item to see if it exists. 
             var customerResponse =
-                await _container.ReadItemAsync<CustomerModel>(customer.Id, new PartitionKey(customer.LastName));
+                await _container.ReadItemAsync<CustomerModel>(customer.Id.ToString(), new PartitionKey(customer.LastName));
         }
         catch (CosmosException ex) when (ex.StatusCode == HttpStatusCode.NotFound)
         {
@@ -62,7 +58,38 @@ public class CosmosService
             Console.WriteLine("Created item in database with id: {0} Operation consumed {1} RUs.\n",
                 customerResponse.Resource.Id, customerResponse.RequestCharge);
         }
+    }
+
+    public async Task<List<CustomerModel>> FindCustomers(string lastName)
+    {
+        _cosmosClient = new CosmosClient(EndpointUri, PrimaryKey);
+        _database = await _cosmosClient.CreateDatabaseIfNotExistsAsync(DatabaseId);
+        _container = await _database.CreateContainerIfNotExistsAsync(ContainerId, "/LastName");
         
+        var sqlQueryText = $"SELECT * FROM c WHERE c.LastName = '{lastName}'";
+        
+        var queryDefinition = new QueryDefinition(sqlQueryText);
+        
+        var queryResultSetIterator = _container.GetItemQueryIterator<CustomerModel>(queryDefinition);
+        
+        var customers = new List<CustomerModel>();
+        
+        while (queryResultSetIterator.HasMoreResults)
+        {
+            var currentResultSet = await queryResultSetIterator.ReadNextAsync();
+            customers.AddRange(currentResultSet);
+        }
+
+        return customers;
+    }
+
+    public async Task DeleteCustomer(string id, string partitionKeyValue)
+    {
+        _cosmosClient = new CosmosClient(EndpointUri, PrimaryKey);
+        _database = await _cosmosClient.CreateDatabaseIfNotExistsAsync(DatabaseId);
+        _container = await _database.CreateContainerIfNotExistsAsync(ContainerId, "/LastName");
+        var customerResponse = await _container.DeleteItemAsync<CustomerModel>(id,new PartitionKey(partitionKeyValue));
+        Console.WriteLine("Deleted customer [{0},{1}]\n", partitionKeyValue, id);
     }
 }
 

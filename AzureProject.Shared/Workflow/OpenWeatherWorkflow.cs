@@ -21,8 +21,11 @@ public class OpenWeatherWorkflow : IOpenWeatherWorkflow
         try
         {
             _log.LogInformation("{Name} executed at: {Now}", namePrefix, DateTime.Now);
-            var openWeatherLatitude = double.Parse(Environment.GetEnvironmentVariable("OpenWeatherLatitude") ?? "0");
-            var openWeatherLongitude = double.Parse(Environment.GetEnvironmentVariable("OpenWeatherLongitude") ?? "0");
+            var openWeatherLatitude =
+                double.Parse(Environment.GetEnvironmentVariable(EnvironmentEnum.OpenWeatherLatitude.ToString()) ?? "0");
+            var openWeatherLongitude =
+                double.Parse(Environment.GetEnvironmentVariable(EnvironmentEnum.OpenWeatherLongitude.ToString()) ??
+                             "0");
             var response = await OpenWeatherService.Get(openWeatherLatitude, openWeatherLongitude);
             if (response != null)
             {

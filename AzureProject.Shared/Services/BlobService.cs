@@ -4,7 +4,7 @@ public static class BlobService
 {
     private static readonly string StorageConnectionString =
         Environment.GetEnvironmentVariable(KeyVaultEnum.StorageConnectionString.ToString()) ?? string.Empty;
-    
+
     public static async Task SaveFile(string fileName, MemoryStream file, string container)
     {
         var containerClient = new BlobContainerClient(

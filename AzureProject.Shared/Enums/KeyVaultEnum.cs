@@ -3,6 +3,7 @@
 public enum KeyVaultEnum
 {
     OpenWeatherKey,
+    SendGridKey,
     StorageConnectionString,
     CosmosEndpointUri,
     CosmosPrimaryKey,

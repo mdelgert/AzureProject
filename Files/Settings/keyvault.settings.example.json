@@ -1,6 +1,7 @@
 {
-  "OpenWeatherKey": "YourKey1",
-  "StorageConnectionString": "YourKey2",
-  "CosmosEndpointUri": "YourKey3",
-  "CosmosPrimaryKey": "YourKey4"
+  "OpenWeatherKey": "YourKey",
+  "SendGridKey" : "YourKey",
+  "StorageConnectionString": "YourKey",
+  "CosmosEndpointUri": "YourKey",
+  "CosmosPrimaryKey": "YourKey"
 }

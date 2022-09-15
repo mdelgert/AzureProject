@@ -31,3 +31,6 @@ Install-Package Microsoft.Azure.Cosmos
 
 https://www.nuget.org/packages/Azure.Storage.Queues
 Install-Package Azure.Storage.Queues
+
+https://www.nuget.org/packages/SendGrid
+Install-Package SendGrid

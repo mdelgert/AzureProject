@@ -5,5 +5,7 @@ public enum KeyVaultEnum
     OpenWeatherKey,
     StorageConnectionString,
     CosmosEndpointUri,
-    CosmosPrimaryKey
+    CosmosPrimaryKey,
+    CryptoSecret,
+    CryptoSalt
 }

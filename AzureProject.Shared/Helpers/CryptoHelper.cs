@@ -12,10 +12,10 @@ public static class CryptoHelper
     /// <param name="plainText">The text to encrypt.</param>
     /// <param name="secret">The 32 character secret value</param>
     /// <param name="salt">The 16 character salt value</param>
-    public static Task<string> EncryptAesString(string plainText, string secret, string salt)
+    public static string EncryptAesString(string plainText, string secret, string salt)
     {
         var encrypted = EncryptProvider.AESEncrypt(plainText, secret, salt);
-        return Task.FromResult(encrypted);
+        return encrypted;
     }
 
     /// <summary>
@@ -24,9 +24,9 @@ public static class CryptoHelper
     /// <param name="cipherText">The text to decrypt.</param>
     /// <param name="secret">The 32 character secret value</param>
     /// <param name="salt">The 16 character salt value</param>
-    public static Task<string> DecryptAesString(string cipherText, string secret, string salt)
+    public static string DecryptAesString(string cipherText, string secret, string salt)
     {
         var decrypted = EncryptProvider.AESDecrypt(cipherText, secret, salt);
-        return Task.FromResult(decrypted);
+        return decrypted;
     }
 }

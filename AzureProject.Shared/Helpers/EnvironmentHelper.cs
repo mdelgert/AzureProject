@@ -36,11 +36,42 @@ public static class EnvironmentHelper
         var json = streamReader.ReadToEnd();
 
         var keys = JsonConvert.DeserializeObject<Dictionary<string, string>>(json);
-        
-        foreach (var key in keys)
-        {
-            Environment.SetEnvironmentVariable(key.Key, key.Value);
-        }
+
+        foreach (var key in keys) Environment.SetEnvironmentVariable(key.Key, key.Value);
+    }
+
+    public static string GetConfigCombined()
+    {
+        var configCombined = new Dictionary<string, string?>();
+
+        var configEnvironment = Enum.GetNames(typeof(EnvironmentEnum))
+            .ToDictionary(name => name, Environment.GetEnvironmentVariable);
+
+        var configKeyVault = Enum.GetNames(typeof(KeyVaultEnum))
+            .ToDictionary(name => name, Environment.GetEnvironmentVariable);
+
+        configEnvironment.ToList().ForEach(x => configCombined.Add(x.Key, x.Value));
+
+        configKeyVault.ToList().ForEach(x => configCombined.Add(x.Key, x.Value));
+
+        var json = JsonConvert.SerializeObject(configCombined);
+
+        return json;
+    }
+
+    public static string GetConfigDictionary()
+    {
+        var config = new Dictionary<string, string?>();
+
+        foreach (var name in Enum.GetNames(typeof(EnvironmentEnum)))
+            config.Add(name, Environment.GetEnvironmentVariable(name));
+
+        foreach (var name in Enum.GetNames(typeof(KeyVaultEnum)))
+            config.Add(name, Environment.GetEnvironmentVariable(name));
+
+        var json = JsonConvert.SerializeObject(config);
+
+        return json;
     }
 }
 

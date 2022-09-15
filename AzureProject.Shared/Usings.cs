@@ -2,8 +2,9 @@
 global using Azure.Security.KeyVault.Secrets;
 global using Azure.Storage.Blobs;
 global using Azure.Storage.Blobs.Models;
+global using AzureProject.Shared.Enums;
 global using AzureProject.Shared.Helpers;
-global using AzureProject.Shared.Model;
+global using AzureProject.Shared.Models;
 global using AzureProject.Shared.Services;
 global using Microsoft.Extensions.Logging;
 global using Newtonsoft.Json;

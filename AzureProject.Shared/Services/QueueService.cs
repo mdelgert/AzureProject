@@ -2,15 +2,14 @@
 
 public class QueueService
 {
+    private readonly string _connectionString =
+        Environment.GetEnvironmentVariable(KeyVaultEnum.StorageConnectionString.ToString()) ?? string.Empty;
     public async Task<bool> CreateQueue(string queueName)
     {
         try
         {
-            // Get the connection string from app settings
-            var connectionString = await KeyVaultHelper.GetSecret("StorageConnectionString");
-
             // Instantiate a QueueClient which will be used to create and manipulate the queue
-            var queueClient = new QueueClient(connectionString, queueName);
+            var queueClient = new QueueClient(_connectionString, queueName);
 
             // Create the queue
             await queueClient.CreateIfNotExistsAsync();
@@ -31,37 +30,29 @@ public class QueueService
             return false;
         }
     }
-    
+
     public async Task InsertMessage(string queueName, string message)
     {
-        // Get the connection string from app settings
-        string connectionString = await KeyVaultHelper.GetSecret("StorageConnectionString");
-
         // Instantiate a QueueClient which will be used to create and manipulate the queue
-        QueueClient queueClient = new QueueClient(connectionString, queueName);
+        var queueClient = new QueueClient(_connectionString, queueName);
 
         // Create the queue if it doesn't already exist
         await queueClient.CreateIfNotExistsAsync();
 
         if (await queueClient.ExistsAsync())
-        {
             // Send a message to the queue
             await queueClient.SendMessageAsync(message);
-        }
 
         Console.WriteLine($"Inserted: {message}");
     }
-    
+
     public async Task PeekMessage(string queueName)
     {
-        // Get the connection string from app settings
-        string connectionString = await KeyVaultHelper.GetSecret("StorageConnectionString");
-
         // Instantiate a QueueClient which will be used to manipulate the queue
-        QueueClient queueClient = new QueueClient(connectionString, queueName);
+        var queueClient = new QueueClient(_connectionString, queueName);
 
         if (queueClient.Exists())
-        { 
+        {
             // Peek at the next message
             PeekedMessage[] peekedMessage = queueClient.PeekMessages();
 
@@ -69,14 +60,11 @@ public class QueueService
             Console.WriteLine($"Peeked message: '{peekedMessage[0].Body}'");
         }
     }
-    
+
     public async Task UpdateMessage(string queueName)
     {
-        // Get the connection string from app settings
-        string connectionString = await KeyVaultHelper.GetSecret("StorageConnectionString");
-
         // Instantiate a QueueClient which will be used to manipulate the queue
-        QueueClient queueClient = new QueueClient(connectionString, queueName);
+        var queueClient = new QueueClient(_connectionString, queueName);
 
         if (await queueClient.ExistsAsync())
         {
@@ -84,10 +72,10 @@ public class QueueService
             QueueMessage[] message = await queueClient.ReceiveMessagesAsync();
 
             // Update the message contents
-            await queueClient.UpdateMessageAsync(message[0].MessageId, 
-                message[0].PopReceipt, 
+            await queueClient.UpdateMessageAsync(message[0].MessageId,
+                message[0].PopReceipt,
                 "Updated contents",
-                TimeSpan.FromSeconds(60.0)  // Make it invisible for another 60 seconds
+                TimeSpan.FromSeconds(60.0) // Make it invisible for another 60 seconds
             );
         }
     }

@@ -1,4 +1,4 @@
-﻿namespace AzureProject.Shared.Model;
+﻿namespace AzureProject.Shared.Models;
 
 public class CustomerModel
 {

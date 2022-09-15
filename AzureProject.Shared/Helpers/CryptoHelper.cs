@@ -1,4 +1,5 @@
 ﻿//Nuget: https://www.nuget.org/packages/NETCore.Encrypt/
+
 using NETCore.Encrypt;
 
 namespace AzureProject.Shared.Helpers;
@@ -29,4 +30,3 @@ public static class CryptoHelper
         return Task.FromResult(decrypted);
     }
 }
-

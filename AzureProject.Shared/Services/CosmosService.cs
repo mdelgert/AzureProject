@@ -1,5 +1,4 @@
-﻿using System.Configuration;
-using System.Net;
+﻿using System.Net;
 using Microsoft.Azure.Cosmos;
 
 namespace AzureProject.Shared.Services;
@@ -11,10 +10,13 @@ public class CosmosService
 
     // The primary key for the Azure Cosmos account.
     private static string _primaryKey = null!;
+    private readonly string containerId = "FamilyContainer";
+
+    // The name of the database and container we will create
+    private readonly string databaseId = "FamilyDatabase";
 
     // The container we will create.
     private Container container;
-    private readonly string containerId = "FamilyContainer";
 
     // The Cosmos client instance
     private CosmosClient cosmosClient;
@@ -22,13 +24,16 @@ public class CosmosService
     // The database we will create
     private Database database;
 
-    // The name of the database and container we will create
-    private readonly string databaseId = "FamilyDatabase";
-
     public async Task Demo()
     {
-        _endpointUri = await KeyVaultHelper.GetSecret("CosmosEndpointUri");
-        _primaryKey= await KeyVaultHelper.GetSecret("CosmosPrimaryKey");
+        // _endpointUri = await KeyVaultHelper.GetSecret("CosmosEndpointUri");
+        // _primaryKey = await KeyVaultHelper.GetSecret("CosmosPrimaryKey");
+        
+        _endpointUri =
+            Environment.GetEnvironmentVariable(KeyVaultEnum.CosmosEndpointUri.ToString()) ?? string.Empty;
+        _primaryKey =
+            Environment.GetEnvironmentVariable(KeyVaultEnum.CosmosPrimaryKey.ToString()) ?? string.Empty;
+        
         await GetStartedDemoAsync();
     }
 

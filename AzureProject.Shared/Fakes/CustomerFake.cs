@@ -1,4 +1,5 @@
 ﻿//Nuget: https://www.nuget.org/packages/Bogus
+
 using Bogus;
 using Bogus.DataSets;
 

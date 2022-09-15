@@ -1,3 +1,4 @@
+global using AzureProject.Shared.Enums;
 global using AzureProject.Shared.Fakes;
 global using AzureProject.Shared.Helpers;
 global using AzureProject.Shared.Services;

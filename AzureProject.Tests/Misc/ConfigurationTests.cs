@@ -10,12 +10,25 @@ public class ConfigurationTests
     }
 
     [Fact]
+    public void PrintConfig()
+    {
+        var config = EnvironmentHelper.GetConfigCombined();
+        _testOutputHelper.WriteLine(config);
+    }
+    
+    [Fact]
     public void PrintValues()
     {
-        _testOutputHelper.WriteLine($"AzureKeyVault={Environment.GetEnvironmentVariable("AzureKeyVault")}");
-        _testOutputHelper.WriteLine($"OpenWeatherKey={Environment.GetEnvironmentVariable("OpenWeatherKey")}");
-        _testOutputHelper.WriteLine($"StorageConnectionString={Environment.GetEnvironmentVariable("StorageConnectionString")}");
-        _testOutputHelper.WriteLine($"CosmosEndpointUri={Environment.GetEnvironmentVariable("CosmosEndpointUri")}");
-        _testOutputHelper.WriteLine($"CosmosPrimaryKey={Environment.GetEnvironmentVariable("CosmosPrimaryKey")}");
+        foreach (var name in Enum.GetNames(typeof(EnvironmentEnum)))
+        {
+            _testOutputHelper.WriteLine($"{name}={Environment.GetEnvironmentVariable(name)}");
+        }
+        
+        foreach (var name in Enum.GetNames(typeof(KeyVaultEnum)))  
+        {
+            _testOutputHelper.WriteLine($"{name}={Environment.GetEnvironmentVariable(name)}");
+        }
     }
 }
+
+//https://www.c-sharpcorner.com/article/loop-through-enum-values-in-c-sharp/

@@ -4,6 +4,7 @@ public enum KeyVaultEnum
 {
     OpenWeatherKey,
     SendGridKey,
+    SlackUrl,
     StorageConnectionString,
     CosmosEndpointUri,
     CosmosPrimaryKey,

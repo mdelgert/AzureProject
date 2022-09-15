@@ -1,6 +1,7 @@
 {
   "OpenWeatherKey": "YourKey",
   "SendGridKey" : "YourKey",
+  "SlackUrl" : "https://hooks.slack.com/services/YourKey",
   "StorageConnectionString": "YourKey",
   "CosmosEndpointUri": "YourKey",
   "CosmosPrimaryKey": "YourKey"

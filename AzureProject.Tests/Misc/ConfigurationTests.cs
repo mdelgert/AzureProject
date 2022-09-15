@@ -12,7 +12,7 @@ public class ConfigurationTests
     [Fact]
     public void PrintConfig()
     {
-        var config = EnvironmentHelper.GetConfigCombined();
+        var config = EnvironmentHelper.GetConfig();
         _testOutputHelper.WriteLine(config);
     }
     

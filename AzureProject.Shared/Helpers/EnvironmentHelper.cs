@@ -39,32 +39,11 @@ public static class EnvironmentHelper
 
         foreach (var key in keys) Environment.SetEnvironmentVariable(key.Key, key.Value);
     }
-
-    public static string GetConfigCombined()
+    
+    public static string GetConfig()
     {
-        var configCombined = new Dictionary<string, string?>();
-
-        var configEnvironment = Enum.GetNames(typeof(EnvironmentEnum))
+        var config = Enum.GetNames(typeof(EnvironmentEnum))
             .ToDictionary(name => name, Environment.GetEnvironmentVariable);
-
-        var configKeyVault = Enum.GetNames(typeof(KeyVaultEnum))
-            .ToDictionary(name => name, Environment.GetEnvironmentVariable);
-
-        configEnvironment.ToList().ForEach(x => configCombined.Add(x.Key, x.Value));
-
-        configKeyVault.ToList().ForEach(x => configCombined.Add(x.Key, x.Value));
-
-        var json = JsonConvert.SerializeObject(configCombined);
-
-        return json;
-    }
-
-    public static string GetConfigDictionary()
-    {
-        var config = new Dictionary<string, string?>();
-
-        foreach (var name in Enum.GetNames(typeof(EnvironmentEnum)))
-            config.Add(name, Environment.GetEnvironmentVariable(name));
 
         foreach (var name in Enum.GetNames(typeof(KeyVaultEnum)))
             config.Add(name, Environment.GetEnvironmentVariable(name));
@@ -78,3 +57,5 @@ public static class EnvironmentHelper
 //https://www.newtonsoft.com/json/help/html/DeserializeObject.htm
 //https://stackoverflow.com/questions/13297563/read-and-parse-a-json-file-in-c-sharp
 //https://stackoverflow.com/questions/1207731/how-can-i-deserialize-json-to-a-simple-dictionarystring-string-in-asp-net
+//https://stackoverflow.com/questions/294138/merging-dictionaries-in-c-sharp
+//https://www.newtonsoft.com/json/help/html/CreateJsonDynamic.htm

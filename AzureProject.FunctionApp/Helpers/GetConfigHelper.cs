@@ -1,8 +1,8 @@
 namespace AzureProject.FunctionApp.Helpers;
 
-public static class UnixTimeHelper
+public static class GetConfigHelper
 {
-    private const string NamePrefix = "UnixTimeHelper";
+    private const string NamePrefix = "GetConfigHelper";
     
     [FunctionName(NamePrefix)]
     [OpenApiOperation(operationId: "Run", tags: new[] { "Helpers" })]
@@ -15,8 +15,8 @@ public static class UnixTimeHelper
 
         try
         {
-            var unixTime = new { unixTime = $"{FormatHelper.UnixTime()}"};
-            responseMessage = JsonConvert.SerializeObject(unixTime, Formatting.Indented);
+            var config = EnvironmentHelper.GetConfig();
+            responseMessage = JsonConvert.SerializeObject(config, Formatting.Indented);
         }
         catch (Exception exception)
         {

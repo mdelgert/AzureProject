@@ -3,6 +3,5 @@ Startup.ConfigureServices(services);
 IServiceProvider serviceProvider = services.BuildServiceProvider();
 //await MongoPlanetsService.GetPlanets();
 //await MongoPlanetsService.GetPlanetsJson();
-await MongoGeneralService.GetDatabases();
-//Console.ReadKey();
-
+//await MongoGeneralService.GetDatabases();
+MongoNotesService.Demo();

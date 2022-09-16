@@ -37,3 +37,6 @@ Install-Package SendGrid
 
 https://www.nuget.org/packages/SlackBotMessages
 Install-Package SlackBotMessages
+
+https://www.nuget.org/packages/MongoDB.Driver
+Install-Package MongoDB.Driver

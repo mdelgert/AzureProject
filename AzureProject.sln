@@ -27,6 +27,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Reference", "Reference", "{
 		Files\Reference\GitHubRunner.md = Files\Reference\GitHubRunner.md
 		Files\Reference\JSONServer.md = Files\Reference\JSONServer.md
 		Files\Reference\KeyVault.md = Files\Reference\KeyVault.md
+		Files\Reference\MongoDB.md = Files\Reference\MongoDB.md
 		Files\Reference\nuget.config = Files\Reference\nuget.config
 	EndProjectSection
 EndProject
@@ -53,9 +54,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{CB3F
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureProject.FunctionApp", "AzureProject.FunctionApp\AzureProject.FunctionApp.csproj", "{12B974A9-C356-440E-A811-0FB69BFB572E}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample Code", "Sample Code", "{A274864C-0CF8-4A6F-B5D0-21B3483E4672}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Example Code", "Example Code", "{A274864C-0CF8-4A6F-B5D0-21B3483E4672}"
 	ProjectSection(SolutionItems) = preProject
-		Files\Sample Code\CosmosSample.cs = Files\Sample Code\CosmosSample.cs
+		Files\Example Code\MongoDbExample.cs = Files\Example Code\MongoDbExample.cs
+		Files\Example Code\CosmosDbExample.cs = Files\Example Code\CosmosDbExample.cs
 	EndProjectSection
 EndProject
 Global

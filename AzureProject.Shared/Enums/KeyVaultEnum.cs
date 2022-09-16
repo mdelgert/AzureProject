@@ -6,6 +6,7 @@ public enum KeyVaultEnum
     SendGridKey,
     SlackUrl,
     StorageConnectionString,
+    MongoDBConnectionString,
     CosmosEndpointUri,
     CosmosPrimaryKey,
     CryptoSecret,

@@ -37,7 +37,9 @@ public static class EnvironmentHelper
 
         var keys = JsonConvert.DeserializeObject<Dictionary<string, string>>(json);
 
-        foreach (var key in keys) Environment.SetEnvironmentVariable(key.Key, key.Value);
+        if (keys == null) return;
+        foreach (var key in keys)
+            Environment.SetEnvironmentVariable(key.Key, key.Value);
     }
     
     public static string GetConfig()

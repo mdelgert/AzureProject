@@ -51,7 +51,7 @@ public class QueueService
         // Instantiate a QueueClient which will be used to manipulate the queue
         var queueClient = new QueueClient(_connectionString, queueName);
 
-        if (queueClient.Exists())
+        if (await queueClient.ExistsAsync())
         {
             // Peek at the next message
             PeekedMessage[] peekedMessage = queueClient.PeekMessages();

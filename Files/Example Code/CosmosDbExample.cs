@@ -3,7 +3,7 @@ using Microsoft.Azure.Cosmos;
 
 namespace AzureProject.SampleCode
 
-public class CosmosSample
+public class CosmosDbExample
 {
     private static readonly string EndpointUri = Environment.GetEnvironmentVariable(KeyVaultEnum.CosmosEndpointUri.ToString()) ?? string.Empty;
     private static readonly string PrimaryKey = Environment.GetEnvironmentVariable(KeyVaultEnum.CosmosPrimaryKey.ToString()) ?? string.Empty;

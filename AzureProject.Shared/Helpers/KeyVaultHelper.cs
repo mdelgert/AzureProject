@@ -11,7 +11,9 @@ public static class KeyVaultHelper
         var client = new SecretClient(new Uri(kvUri), new DefaultAzureCredential());
         var json = client.GetSecret("EnvironmentJson").Value.Value;
         var keys = JsonConvert.DeserializeObject<Dictionary<string, string>>(json);
-        foreach (var key in keys) Environment.SetEnvironmentVariable(key.Key, key.Value);
+        if (keys == null) return;
+        foreach (var key in keys)
+            Environment.SetEnvironmentVariable(key.Key, key.Value);
     }
 
     public static async Task SetSecret(string secretName, string secretValue)

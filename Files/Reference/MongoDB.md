@@ -2,3 +2,8 @@ https://www.mongodb.com/blog/post/quick-start-c-sharp-and-mongodb-starting-and-s
 https://www.mongodb.com/blog/post/quick-start-c-sharp-and-mongodb-creating-documents
 https://mongodb.github.io/mongo-csharp-driver/1.11/getting_started/
 https://gist.github.com/kenwalger/4a3da771b8471c43d190327556ebc3ab
+https://www.cdata.com/kb/tech/mongodb-ado-codefirst.rst
+https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-mongo-app?view=aspnetcore-6.0&tabs=visual-studio
+https://mongodb.github.io/mongo-csharp-driver/1.11/linq/
+https://www.mongodb.com/developer/languages/csharp/create-restful-api-dotnet-core-mongodb/
+https://www.codementor.io/@damithg/mongodb-c-tutorial-the-easy-way-v8t5e6v51

@@ -7,3 +7,7 @@ https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-mongo-app?view=aspn
 https://mongodb.github.io/mongo-csharp-driver/1.11/linq/
 https://www.mongodb.com/developer/languages/csharp/create-restful-api-dotnet-core-mongodb/
 https://www.codementor.io/@damithg/mongodb-c-tutorial-the-easy-way-v8t5e6v51
+https://www.nuget.org/packages/MongoDB.Entities
+https://mongodb-entities.com/
+https://m-haji.medium.com/mongodb-context-implementation-in-c-as-neat-as-entity-framework-16cb81930ab3
+https://docs.microsoft.com/en-us/ef/core/providers/cosmos/?tabs=dotnet-core-cli

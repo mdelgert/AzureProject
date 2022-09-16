@@ -56,8 +56,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureProject.FunctionApp", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Example Code", "Example Code", "{A274864C-0CF8-4A6F-B5D0-21B3483E4672}"
 	ProjectSection(SolutionItems) = preProject
-		Files\Example Code\MongoDbExample.cs = Files\Example Code\MongoDbExample.cs
 		Files\Example Code\CosmosDbExample.cs = Files\Example Code\CosmosDbExample.cs
+		Files\Example Code\MongoDbExample.cs = Files\Example Code\MongoDbExample.cs
 	EndProjectSection
 EndProject
 Global

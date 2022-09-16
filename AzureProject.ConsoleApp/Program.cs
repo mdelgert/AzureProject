@@ -1,6 +1,8 @@
 ﻿IServiceCollection services = new ServiceCollection();
 Startup.ConfigureServices(services);
 IServiceProvider serviceProvider = services.BuildServiceProvider();
-await MongoGradesService.Demo();
+//await MongoPlanetsService.GetPlanets();
+//await MongoPlanetsService.GetPlanetsJson();
+await MongoGeneralService.GetDatabases();
 //Console.ReadKey();
 

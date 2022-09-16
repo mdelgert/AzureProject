@@ -3,6 +3,7 @@ global using AzureProject.Shared.Enums;
 global using AzureProject.Shared.Fakes;
 global using AzureProject.Shared.Helpers;
 global using AzureProject.Shared.Workflow;
+global using AzureProject.Shared.Services.Mongo;
 global using Microsoft.AspNetCore.Http;
 global using Microsoft.AspNetCore.Mvc;
 global using Microsoft.Azure.Functions.Extensions.DependencyInjection;

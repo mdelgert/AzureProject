@@ -1,7 +1,21 @@
-﻿namespace AzureProject.Shared.Helpers;
+﻿using System.Web;
+
+namespace AzureProject.Shared.Helpers;
 
 public static class FormatHelper
 {
+    public static string UrlEncodeString(string input)
+    {
+        var output = HttpUtility.UrlEncode(input);
+        return output;
+    }
+    
+    public static string UrlDecodeString(string input)
+    {
+        var output = HttpUtility.UrlDecode(input);
+        return output;
+    }
+    
     public static long UnixTime()
     {
         //https://stackoverflow.com/questions/17632584/how-to-get-the-unix-timestamp-in-c-sharp

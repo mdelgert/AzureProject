@@ -9,6 +9,24 @@ public class FormatHelperTests
         _testOutputHelper = testOutputHelper;
     }
 
+    [Theory]
+    [InlineData("c@t2022!", "c%40t2022!")]
+    public void UrlEncodeStringTest(string input, string output)
+    {
+        var outputEncoded = FormatHelper.UrlEncodeString(input);
+        _testOutputHelper.WriteLine(output);
+        Assert.Equal(output, outputEncoded);
+    }
+    
+    [Theory]
+    [InlineData("c@t2022!", "c%40t2022!")]
+    public void UrlDecodeStringTest(string input, string output)
+    {
+        var outputDecoded = FormatHelper.UrlDecodeString(input);
+        _testOutputHelper.WriteLine(output);
+        Assert.Equal(input, outputDecoded);
+    }
+    
     [Fact]
     public void UnixTimeTest()
     {

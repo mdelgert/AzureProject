@@ -8,3 +8,11 @@ npm install -g azurite
 
 # Run Azurite
 azurite --silent --location c:\azurite --debug c:\azurite\debug.log
+
+https://developercommunity.visualstudio.com/t/azure-functions-not-starting-in-vs-with-azurite-if/1155814
+
+Add to function app to start azure storage
+
+<PropertyGroup> 
+<StartDevelopmentStorage>true</StartDevelopmentStorage> 
+</PropertyGroup>

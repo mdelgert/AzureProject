@@ -4,7 +4,9 @@
     <AzureFunctionsVersion>v4</AzureFunctionsVersion>
     <DockerFastModeProjectMountDirectory>/home/site/wwwroot</DockerFastModeProjectMountDirectory>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
-    <StartDevelopmentStorage>true</StartDevelopmentStorage>
+    <PropertyGroup>
+      <StartDevelopmentStorage>true</StartDevelopmentStorage>
+    </PropertyGroup>
   </PropertyGroup>
   <ItemGroup>
     <Content Include="..\Files\Settings\local.settings.json" Link="local.settings.json">

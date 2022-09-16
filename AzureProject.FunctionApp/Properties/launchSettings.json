@@ -3,12 +3,6 @@
     "AzureProject.FunctionApp": {
       "commandName": "Project",
       "commandLineArgs": "--port 7105"
-    },
-    "Docker (1)": {
-      "commandName": "Docker",
-      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
-      "httpPort": 32624,
-      "useSSL": false
     }
   }
 }

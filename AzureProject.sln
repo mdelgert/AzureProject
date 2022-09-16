@@ -60,6 +60,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Example Code", "Example Cod
 		Files\Example Code\MongoDbExample.cs = Files\Example Code\MongoDbExample.cs
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Postman", "Postman", "{6A99C148-5267-4386-9C88-5F7DC3F28BD2}"
+	ProjectSection(SolutionItems) = preProject
+		Files\Postman\AzureProject.postman_collection.json = Files\Postman\AzureProject.postman_collection.json
+		Files\Postman\OpenWeather.postman_collection.json = Files\Postman\OpenWeather.postman_collection.json
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -92,6 +98,7 @@ Global
 		{A41EE061-CCCB-466F-81E1-E5D3CE632083} = {9469E738-0CF5-4BFC-8C14-E7C49CEA720C}
 		{CB3F8A0E-5B12-44BB-9A1E-30844438F9A1} = {9469E738-0CF5-4BFC-8C14-E7C49CEA720C}
 		{A274864C-0CF8-4A6F-B5D0-21B3483E4672} = {9469E738-0CF5-4BFC-8C14-E7C49CEA720C}
+		{6A99C148-5267-4386-9C88-5F7DC3F28BD2} = {9469E738-0CF5-4BFC-8C14-E7C49CEA720C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BC7084E0-1729-443C-9BCF-B75F243AB023}

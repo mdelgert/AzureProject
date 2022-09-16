@@ -1,0 +1,174 @@
+{
+	"info": {
+		"_postman_id": "1972d347-7dd1-4406-8b55-3b3317ed2f4e",
+		"name": "AzureProject",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23312268"
+	},
+	"item": [
+		{
+			"name": "MongoPlanets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseUrl}}MongoPlanets?code={{FunctionKey}}",
+					"host": [
+						"{{BaseUrl}}MongoPlanets"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "{{FunctionKey}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MongoShipwrecks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseUrl}}MongoShipwrecks?code={{FunctionKey}}",
+					"host": [
+						"{{BaseUrl}}MongoShipwrecks"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "{{FunctionKey}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MongoCustomers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseUrl}}MongoCustomers?code={{FunctionKey}}",
+					"host": [
+						"{{BaseUrl}}MongoCustomers"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "{{FunctionKey}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MongoGeneral",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseUrl}}MongoGeneral?code={{FunctionKey}}",
+					"host": [
+						"{{BaseUrl}}MongoGeneral"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "{{FunctionKey}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CustomerFake",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseUrl}}CustomerFakeFunction?code={{FunctionKey}}",
+					"host": [
+						"{{BaseUrl}}CustomerFakeFunction"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "{{FunctionKey}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "WeatherFake",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseUrl}}WeatherFakeFunction?code={{FunctionKey}}",
+					"host": [
+						"{{BaseUrl}}WeatherFakeFunction"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "{{FunctionKey}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BaseUrl",
+			"value": "http://localhost:7105/api/",
+			"type": "string"
+		},
+		{
+			"key": "FunctionKey",
+			"value": "ChangeMe",
+			"type": "string"
+		},
+		{
+			"key": "BaseUrlLocal",
+			"value": "http://localhost:7105/api/",
+			"type": "string",
+			"disabled": true
+		},
+		{
+			"key": "BaseUrlRemote",
+			"value": "ChangeMe",
+			"type": "string",
+			"disabled": true
+		}
+	]
+}

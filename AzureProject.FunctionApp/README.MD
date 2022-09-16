@@ -7,6 +7,9 @@ Install-Package Microsoft.Azure.Functions.Extensions
 https://www.nuget.org/packages/Microsoft.Extensions.DependencyInjection/
 Install-Package Microsoft.Extensions.DependencyInjection
 
+https://www.nuget.org/packages/MongoDB.Driver
+Install-Package MongoDB.Driver
+
 #Azure Functions – Time Trigger (CRON) Cheat Sheet
 https://arminreiter.com/2017/02/azure-functions-time-trigger-cron-cheat-sheet/
 */15 * * * * * every 15 seconds

@@ -83,6 +83,39 @@ public class CosmosService
         return customers;
     }
 
+    public async Task<List<CustomerModel>> ReadCustomers()
+    {
+        _cosmosClient = new CosmosClient(EndpointUri, PrimaryKey);
+        _database = await _cosmosClient.CreateDatabaseIfNotExistsAsync(DatabaseId);
+        _container = await _database.CreateContainerIfNotExistsAsync(ContainerId, "/LastName");
+        
+        var sqlQueryText = $"SELECT TOP 10 * FROM c";
+        
+        var queryDefinition = new QueryDefinition(sqlQueryText);
+        
+        var queryResultSetIterator = _container.GetItemQueryIterator<CustomerModel>(queryDefinition);
+        
+        var customers = new List<CustomerModel>();
+        
+        while (queryResultSetIterator.HasMoreResults)
+        {
+            var currentResultSet = await queryResultSetIterator.ReadNextAsync();
+            customers.AddRange(currentResultSet);
+        }
+
+        return customers;
+    }
+
+    public async Task UpdateCustomer(CustomerModel customer)
+    {
+        _cosmosClient = new CosmosClient(EndpointUri, PrimaryKey);
+        _database = await _cosmosClient.CreateDatabaseIfNotExistsAsync(DatabaseId);
+        _container = await _database.CreateContainerIfNotExistsAsync(ContainerId, "/LastName");
+        var customerResponse = await _container.ReadItemAsync<CustomerModel>(customer.Id.ToString(), new PartitionKey(customer.LastName));
+        var itemBody = customerResponse.Resource;
+        customerResponse = await _container.ReplaceItemAsync<CustomerModel>(customer, itemBody.Id.ToString(), new PartitionKey(itemBody.LastName));
+    }
+    
     public async Task DeleteCustomer(string id, string partitionKeyValue)
     {
         _cosmosClient = new CosmosClient(EndpointUri, PrimaryKey);

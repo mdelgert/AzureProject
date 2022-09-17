@@ -4,3 +4,11 @@ https://github.com/Azure-Samples/cosmos-dotnet-getting-started
 https://github.com/JeremyLikness/PlanetaryDocs
 https://blog.jeremylikness.com/blog/azure-cosmos-db-with-ef-core-on-blazor-server/
 https://www.daveabrock.com/2020/12/13/blast-off-blazor-cosmos/
+https://docs.microsoft.com/en-us/ef/core/providers/cosmos/?tabs=dotnet-core-cli
+https://docs.microsoft.com/en-us/ef/core/providers/cosmos/functions
+https://www.c-sharpcorner.com/article/azure-cosmos-db-sql-api-using-ef-core/
+https://dotnetfalcon.com/entity-framework-core-cosmos-db-provider/
+https://stackoverflow.com/questions/60790797/cosmos-provider-for-entity-framework-core-creating-container-with-dbcontext-clas
+https://www.codemag.com/Article/2205061/Using-Cosmos-DB-in-.NET-Core-Projects
+https://learn.microsoft.com/en-us/dotnet/api/microsoft.azure.cosmos.container.deletecontainerasync?view=azure-dotnet
+https://learn.microsoft.com/en-us/ef/core/querying/

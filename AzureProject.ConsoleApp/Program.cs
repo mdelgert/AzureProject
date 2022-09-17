@@ -4,4 +4,5 @@ IServiceProvider serviceProvider = services.BuildServiceProvider();
 //await MongoPlanetsService.GetPlanets();
 //await MongoPlanetsService.GetPlanetsJson();
 //await MongoGeneralService.GetDatabases();
-MongoNotesService.Demo();
+//MongoNotesService.Demo();
+await CosmosCustomerService.Demo();

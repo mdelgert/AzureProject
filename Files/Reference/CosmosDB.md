@@ -12,3 +12,5 @@ https://stackoverflow.com/questions/60790797/cosmos-provider-for-entity-framewor
 https://www.codemag.com/Article/2205061/Using-Cosmos-DB-in-.NET-Core-Projects
 https://learn.microsoft.com/en-us/dotnet/api/microsoft.azure.cosmos.container.deletecontainerasync?view=azure-dotnet
 https://learn.microsoft.com/en-us/ef/core/querying/
+https://github.com/dotnet/EntityFramework.Docs
+https://github.com/dotnet/EntityFramework.Docs/tree/main/samples/end2end/PlanetaryDocs

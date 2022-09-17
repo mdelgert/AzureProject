@@ -15,7 +15,6 @@ public static class CosmosNoteService
     {
         //await Context.Database.EnsureDeletedAsync();
         await Context.Database.EnsureCreatedAsync();
-        
         await Create();
         //await Read();
         //await Update();
@@ -28,7 +27,7 @@ public static class CosmosNoteService
         //await Context.Database.EnsureDeletedAsync();
         //await Context.Database.EnsureCreatedAsync();
         
-        for (var i = 1; i <= 10; i++)
+        for (var i = 1; i <= 1000; i++)
         {
             var note = new NoteModel {Title = $"Test{i}", Message = $"Message{i}"};
             Console.WriteLine($"Creating note {i}.");

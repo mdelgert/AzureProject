@@ -5,32 +5,36 @@ namespace AzureProject.Shared.Services.Cosmos;
 
 public static class CosmosCustomerService
 {
+    private static readonly CosmosContext Context = new();
+    public static Task<string> GetAllCustomers()
+    {
+        var customers = Context.Customer.ToList();
+        var response = JsonConvert.SerializeObject(customers, Formatting.Indented);
+        return Task.FromResult(response);
+    }
+    
     public static async Task Demo()
     {
         //await DeleteCustomers();
         //await CreateCustomer();
         await CreateCustomers();
-        await GetCustomers();
+        //await GetCustomers();
     }
 
     private static async Task DeleteCustomers()
     {
-        await using var context = new CosmosContext();
+        var customers = Context.Customer.ToList();
 
-        var customers = context.Customer.ToList();
+        foreach (var customer in customers) Context.Customer.Remove(customer);
 
-        foreach (var customer in customers) context.Customer.Remove(customer);
-
-        await context.SaveChangesAsync();
+        await Context.SaveChangesAsync();
 
         Console.WriteLine("Delete success!");
     }
 
     private static async Task GetCustomers()
     {
-        await using var context = new CosmosContext();
-
-        var customers = context.Customer.ToList();
+        var customers = Context.Customer.ToList();
 
         foreach (var customer in customers) Console.WriteLine($"{customer.FirstName} {customer.LastName}");
 
@@ -39,14 +43,12 @@ public static class CosmosCustomerService
 
     private static async Task CreateCustomers()
     {
-        await using var context = new CosmosContext();
-
         for (var i = 1; i <= 1000; i++)
         {
             var faker = new Faker();
             var phone = new PhoneNumbers();
 
-            context.Add(
+            Context.Add(
                 new CustomerModel
                 {
                     FirstName = faker.Person.FirstName,
@@ -59,25 +61,24 @@ public static class CosmosCustomerService
                 });
         }
 
-        await context.SaveChangesAsync();
+        await Context.SaveChangesAsync();
 
         Console.WriteLine("Save success!");
     }
 
     private static async Task CreateCustomer()
     {
-        await using var context = new CosmosContext();
-        await context.Database.EnsureDeletedAsync();
-        await context.Database.EnsureCreatedAsync();
+        await Context.Database.EnsureDeletedAsync();
+        await Context.Database.EnsureCreatedAsync();
 
-        context.Add(
+        Context.Add(
             new CustomerModel
             {
                 FirstName = "Bob",
                 LastName = "Smith"
             });
 
-        await context.SaveChangesAsync();
+        await Context.SaveChangesAsync();
 
         Console.WriteLine("Save success!");
     }

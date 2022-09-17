@@ -1,4 +1,5 @@
 ﻿global using AzureProject.FunctionApp;
+global using AzureProject.Shared.Services.Cosmos;
 global using AzureProject.Shared.Enums;
 global using AzureProject.Shared.Fakes;
 global using AzureProject.Shared.Helpers;
@@ -18,4 +19,3 @@ global using Newtonsoft.Json;
 global using System;
 global using System.Net;
 global using System.Threading.Tasks;
-

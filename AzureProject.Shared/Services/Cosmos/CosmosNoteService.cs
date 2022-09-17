@@ -4,20 +4,31 @@ public static class CosmosNoteService
 {
     private static readonly CosmosContext Context = new();
 
+    public static Task<string> GetNotes()
+    {
+        var notes = Context.Note.ToList();
+        var response = JsonConvert.SerializeObject(notes, Formatting.Indented);
+        return Task.FromResult(response);
+    }
+    
     public static async Task Demo()
     {
         //await Context.Database.EnsureDeletedAsync();
-        //await Create();
+        await Context.Database.EnsureCreatedAsync();
+        
+        await Create();
         //await Read();
         //await Update();
-        await Delete();
+        //await Delete();
     }
 
     private static async Task Create()
     {
-        await Context.Database.EnsureCreatedAsync();
         
-        for (var i = 1; i <= 1000; i++)
+        //await Context.Database.EnsureDeletedAsync();
+        //await Context.Database.EnsureCreatedAsync();
+        
+        for (var i = 1; i <= 10; i++)
         {
             var note = new NoteModel {Title = $"Test{i}", Message = $"Message{i}"};
             Console.WriteLine($"Creating note {i}.");
@@ -52,7 +63,11 @@ public static class CosmosNoteService
     private static async Task Delete()
     {
         var notes = Context.Note.ToList();
-        foreach (var note in notes) Context.Note.Remove(note);
+        foreach (var note in notes)
+        {
+            Console.WriteLine($"Deleting note {note.Id}.");
+            Context.Note.Remove(note);
+        }
         await Context.SaveChangesAsync();
         Console.WriteLine("Delete success!");
     }

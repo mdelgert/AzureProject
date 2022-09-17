@@ -22,3 +22,5 @@ https://arminreiter.com/2017/02/azure-functions-time-trigger-cron-cheat-sheet/
 
 # Swagger UI
 https://func-app-test-eastus.azurewebsites.net/api/swagger/ui#/
+
+http://localhost:7105/api/swagger/ui#/

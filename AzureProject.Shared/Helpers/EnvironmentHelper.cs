@@ -50,8 +50,7 @@ public static class EnvironmentHelper
         foreach (var name in Enum.GetNames(typeof(KeyVaultEnum)))
             config.Add(name, Environment.GetEnvironmentVariable(name));
 
-        var json = JsonConvert.SerializeObject(config);
-
+        var json = JsonConvert.SerializeObject(config, Formatting.Indented);
         return json;
     }
 }

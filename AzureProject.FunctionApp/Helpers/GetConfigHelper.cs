@@ -15,8 +15,7 @@ public static class GetConfigHelper
 
         try
         {
-            var config = EnvironmentHelper.GetConfig();
-            responseMessage = JsonConvert.SerializeObject(config, Formatting.Indented);
+            responseMessage = EnvironmentHelper.GetConfig();
         }
         catch (Exception exception)
         {

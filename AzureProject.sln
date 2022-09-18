@@ -27,6 +27,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Reference", "Reference", "{
 		Files\Reference\GitHubRunner.md = Files\Reference\GitHubRunner.md
 		Files\Reference\JSONServer.md = Files\Reference\JSONServer.md
 		Files\Reference\KeyVault.md = Files\Reference\KeyVault.md
+		Files\Reference\MAUI.md = Files\Reference\MAUI.md
 		Files\Reference\MongoDB.md = Files\Reference\MongoDB.md
 		Files\Reference\MongoDbMongosh.md = Files\Reference\MongoDbMongosh.md
 		Files\Reference\nuget.config = Files\Reference\nuget.config
